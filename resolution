@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+void main(){
+	
+	int cand = 0;
+	float soma = 0, nota, maiorN = 0, menorN = 0, med;
+	
+	printf("Nota:");
+	scanf("%f", &nota);
+	
+	do{
+	    if(nota > maiorN){
+	        maiorN = nota;
+	    } else if(nota < menorN){
+	        menorN = nota;
+	}
+	    cand += 1;
+	    soma += nota;
+	    
+	    printf("Nota:");
+	    scanf("%f", &nota);
+	}
+    while (nota>= 0);
+    med = (soma/cand);
+    
+    printf("O numero de candidados e: %d", cand);
+    printf("\nA media aritmetica e: %.2f", med);
+    printf("\nA maior nota lida e: %.2f", maiorN);
+    printf("\nA menor nota lida e: %.2f", menorN);
+}
